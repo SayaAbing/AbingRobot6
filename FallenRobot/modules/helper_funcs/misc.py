@@ -13,7 +13,7 @@ from telegram import (
 )
 from telegram.error import TelegramError
 
-from FallenRobot import NO_LOAD
+from AbingRobot import NO_LOAD
 
 
 class EqInlineKeyboardButton(InlineKeyboardButton):
