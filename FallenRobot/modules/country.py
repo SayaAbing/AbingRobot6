@@ -1,8 +1,8 @@
 import flag
 from countryinfo import CountryInfo
 
-from FallenRobot import BOT_NAME, telethn
-from FallenRobot.events import register
+from AbingRobot import BOT_NAME, telethn
+from AbingRobot.events import register
 
 
 @register(pattern="^/country (.*)")
