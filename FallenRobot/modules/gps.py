@@ -2,9 +2,9 @@ from geopy.geocoders import Nominatim
 from telethon import *
 from telethon.tl import *
 
-from FallenRobot import *
-from FallenRobot import telethn as tbot
-from FallenRobot.events import register
+from AbingRobot import *
+from AbingRobot import telethn as tbot
+from AbingRobot.events import register
 
 GMAPS_LOC = "https://maps.googleapis.com/maps/api/geocode/json"
 
@@ -14,7 +14,7 @@ async def _(event):
     args = event.pattern_match.group(1)
 
     try:
-        geolocator = Nominatim(user_agent="FallenRobot")
+        geolocator = Nominatim(user_agent="AbingRobot")
         geoloc = geolocator.geocode(args)
         gm = f"https://www.google.com/maps/search/{geoloc.latitude},{geoloc.longitude}"
         await tbot.send_file(
