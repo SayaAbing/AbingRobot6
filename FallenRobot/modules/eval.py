@@ -9,8 +9,8 @@ from contextlib import redirect_stdout
 from telegram import ParseMode, Update
 from telegram.ext import CallbackContext, CommandHandler
 
-from FallenRobot import LOGGER, dispatcher
-from FallenRobot.modules.helper_funcs.chat_status import dev_plus
+from AbingRobot import LOGGER, dispatcher
+from AbingRobot.modules.helper_funcs.chat_status import dev_plus
 
 namespaces = {}
 
@@ -75,7 +75,7 @@ def do(func, bot, update):
 
     os.chdir(os.getcwd())
     with open(
-        os.path.join(os.getcwd(), "FallenRobot/modules/helper_funcs/temp.txt"), "w"
+        os.path.join(os.getcwd(), "AbingRobot/modules/helper_funcs/temp.txt"), "w"
     ) as temp:
         temp.write(body)
 
