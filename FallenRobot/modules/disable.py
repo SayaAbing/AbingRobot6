@@ -12,20 +12,20 @@ from telegram.ext import (
 )
 from telegram.utils.helpers import escape_markdown
 
-from FallenRobot import dispatcher
-from FallenRobot.modules.helper_funcs.handlers import CMD_STARTERS, SpamChecker
-from FallenRobot.modules.helper_funcs.misc import is_module_loaded
+from AbingRobot import dispatcher
+from AbingRobot.modules.helper_funcs.handlers import CMD_STARTERS, SpamChecker
+from AbingRobot.modules.helper_funcs.misc import is_module_loaded
 
 FILENAME = __name__.rsplit(".", 1)[-1]
 
 # If module is due to be loaded, then setup all the magical handlers
 if is_module_loaded(FILENAME):
-    from FallenRobot.modules.helper_funcs.chat_status import (
+    from AbingRobot.modules.helper_funcs.chat_status import (
         connection_status,
         is_user_admin,
         user_admin,
     )
-    from FallenRobot.modules.sql import disable_sql as sql
+    from AbingRobot.modules.sql import disable_sql as sql
 
     DISABLE_CMDS = []
     DISABLE_OTHER = []
@@ -155,7 +155,7 @@ if is_module_loaded(FILENAME):
         args = context.args
         chat = update.effective_chat
         if len(args) >= 1:
-            disable_module = "FallenRobot.modules." + args[0].rsplit(".", 1)[0]
+            disable_module = "AbingRobot.modules." + args[0].rsplit(".", 1)[0]
 
             try:
                 module = importlib.import_module(disable_module)
@@ -228,7 +228,7 @@ if is_module_loaded(FILENAME):
         chat = update.effective_chat
 
         if len(args) >= 1:
-            enable_module = "FallenRobot.modules." + args[0].rsplit(".", 1)[0]
+            enable_module = "AbingRobot.modules." + args[0].rsplit(".", 1)[0]
 
             try:
                 module = importlib.import_module(enable_module)
