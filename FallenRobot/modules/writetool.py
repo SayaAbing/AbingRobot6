@@ -2,8 +2,8 @@ import requests
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup, ParseMode, Update
 from telegram.ext import CallbackContext
 
-from FallenRobot import BOT_NAME, BOT_USERNAME, dispatcher
-from FallenRobot.modules.disable import DisableAbleCommandHandler
+from AbingRobot import BOT_NAME, BOT_USERNAME, dispatcher
+from AbingRobot.modules.disable import DisableAbleCommandHandler
 
 
 def handwrite(update: Update, context: CallbackContext):
@@ -19,9 +19,9 @@ def handwrite(update: Update, context: CallbackContext):
         caption=f"""
 Successfully Written Text 💘
 
-✨ **Written By :** [{BOT_NAME}](https://t.me/{BOT_USERNAME})
-🥀 **Requested by :** {update.effective_user.first_name}
-❄ **Link :** `{req}`""",
+ **Written By :** [{BOT_NAME}](https://t.me/{BOT_USERNAME})
+ **Requested by :** {update.effective_user.first_name}
+ **Link :** `{req}`""",
         parse_mode=ParseMode.MARKDOWN,
         reply_markup=InlineKeyboardMarkup(
             [
