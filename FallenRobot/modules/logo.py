@@ -6,8 +6,8 @@ import random
 import requests
 from PIL import Image, ImageDraw, ImageFont
 
-from FallenRobot import BOT_NAME, BOT_USERNAME, OWNER_ID, telethn
-from FallenRobot.events import register
+from AbingRobot import BOT_NAME, BOT_USERNAME, OWNER_ID, telethn
+from AbingRobot.events import register
 
 LOGO_LINKS = [
     "https://telegra.ph/file/d1838efdafce9fe611d0c.jpg",
@@ -247,7 +247,7 @@ async def lego(event):
     quew = event.pattern_match.group(1)
     if event.sender_id != OWNER_ID and not quew:
         await event.reply(
-            "ɢɪᴠᴇ sᴏᴍᴇ ᴛᴇxᴛ ᴛᴏ ᴄʀᴇᴀᴛᴇ ʟᴏɢᴏ !\nExample : `/logo <ANONYMOUS>`"
+            "ɢɪᴠᴇ sᴏᴍᴇ ᴛᴇxᴛ ᴛᴏ ᴄʀᴇᴀᴛᴇ ʟᴏɢᴏ !\nExample : `/logo <ABING>`"
         )
         return
     pesan = await event.reply("**ᴄʀᴇᴀᴛɪɴɢ ʏᴏᴜʀ ʀᴇǫᴜᴇsᴛᴇᴅ ʟᴏɢᴏ ᴘʟᴇᴀsᴇ ᴡᴀɪᴛ ᴀ sᴇᴄ...**")
@@ -257,7 +257,7 @@ async def lego(event):
         img = Image.open(io.BytesIO(requests.get(randc).content))
         draw = ImageDraw.Draw(img)
         image_widthz, image_heightz = img.size
-        fnt = glob.glob("./FallenRobot/resources/fonts/*")
+        fnt = glob.glob("./AbingRobot/resources/fonts/*")
         randf = random.choice(fnt)
         font = ImageFont.truetype(randf, 120)
         w, h = draw.textsize(text, font=font)
@@ -290,7 +290,7 @@ async def lego(event):
         img = Image.open(io.BytesIO(requests.get(randc).content))
         draw = ImageDraw.Draw(img)
         image_widthz, image_heightz = img.size
-        fnt = glob.glob("./FallenRobot/resources/fonts/*")
+        fnt = glob.glob("./AbingRobot/resources/fonts/*")
         randf = random.choice(fnt)
         font = ImageFont.truetype(randf, 120)
         w, h = draw.textsize(text, font=font)
