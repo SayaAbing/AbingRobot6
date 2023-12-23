@@ -3,9 +3,9 @@ import json
 import requests
 from PyDictionary import PyDictionary
 
-from FallenRobot.events import register
+from AbingRobot.events import register
 
-API_KEY = "6ae0c3a0-afdc-4532-a810-82ded0054236"
+API_KEY = "6ae0c3a0-afdc-4532-a810-82ded0054236-"
 URL = "http://services.gingersoftware.com/Ginger/correct/json/GingerTheText"
 
 
